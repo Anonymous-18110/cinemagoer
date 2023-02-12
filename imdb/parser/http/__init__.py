@@ -258,14 +258,15 @@ class IMDbURLopener:
             if size != -1:
                 # Ensure that the Range header is removed.
                 self.del_header('Range')
-            raise IMDbDataAccessError(
-                {'errcode': e.errno,
-                 'errmsg': str(e.strerror),
-                 'url': url,
-                 'proxy': self.get_proxy(),
-                 'exception type': 'IOError',
-                 'original exception': e}
-            )
+            
+            #raise IMDbDataAccessError(
+              #  {'errcode': e.errno,
+               #  'errmsg': str(e.strerror),
+                # 'url': url,
+              #   'proxy': self.get_proxy(),
+               #  'exception type': 'IOError',
+                 #'original exception': e}
+           # )
         if encode is None:
             encode = 'utf8'
             # The detection of the encoding is error prone...
