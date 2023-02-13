@@ -270,8 +270,8 @@ class IMDbURLopener:
         if encode is None:
             encode = 'utf8'
             # The detection of the encoding is error prone...
-            self._logger.warn('Unable to detect the encoding of the retrieved page [%s];'
-                              ' falling back to default utf8.', encode)
+            #self._logger.warn('Unable to detect the encoding of the retrieved page [%s];'
+                           #   ' falling back to default utf8.', encode)
         if isinstance(content, str):
             return content
         return str(content, encode, 'replace')
